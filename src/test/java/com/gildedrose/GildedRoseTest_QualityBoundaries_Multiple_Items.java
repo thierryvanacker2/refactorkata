@@ -16,13 +16,13 @@ class GildedRoseTest_QualityBoundaries_Multiple_Items {
         new GildedRose(new Item[]{Item, Item2, Item3, Item4}).updateQuality();
 
         /* Aged Brie increases quality, it should not exceed 50 */
-        assertEquals(Item.quality, 50);
+        assertEquals(50, Item.quality);
         /* Normal Items go down in quality */
-        assertEquals(Item2.quality, 49);
+        assertEquals(49, Item2.quality);
         /* Sulfuras never decreases in quality */
-        assertEquals(Item3.quality, 50);
+        assertEquals(50, Item3.quality);
         /* Quality cannot go negative */
-        assertEquals(Item4.quality, 0);
+        assertEquals(0, Item4.quality);
     }
 
 }

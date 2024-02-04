@@ -13,4 +13,10 @@ public class ItemWrapperConjured extends ItemWrapper {
         qualityDown();
         qualityDown();
     }
+
+    @Override
+    protected void sellInExpired() {
+        qualityDown();
+        qualityDown();
+    }
 }

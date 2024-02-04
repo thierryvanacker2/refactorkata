@@ -21,8 +21,13 @@ it would have if-else statements per name of item.
 Having that kind of if's made it easier to make a new class ItemWrapper to host all the functionality regarding item.
 We need the wrapper here because we were not allowed to change the Item class itself.
 
-Once all functionality is in the wrapper, it can ben subclassed per type of Item. Made in total 4 for the items with
-non-standard behavior. All other items are standard and use the functionality of the parent class: ItemWrapper.
+Once all functionality is in the wrapper, it can ben subclassed per type of Item. Made in total 4
+(3 for existing requirements, 1 for new requirement) for the items with non-standard behavior.
+All other items are standard and use the functionality of the parent class: ItemWrapper.
+
+Also made a factory class to not have the logic of how to create an instance of the Item with the correct subclass, in
+the GildedRose class. That means that all of the code which is specific to a type of Item is in the subclasses and in the
+Generator class. All other classes are independent of Item type.
 
 
 

@@ -13,9 +13,9 @@ class GildedRoseTest_sellbypassed_twice_decrease {
         new GildedRose(new Item[]{normalItem, normalItem2}).updateQuality();
 
         /* Decrease by 2 since sellby has passed */
-        assertEquals(normalItem.quality, 18);
+        assertEquals(18, normalItem.quality);
         /* Decrease by 1 */
-        assertEquals(normalItem2.quality, 19);
+        assertEquals(19, normalItem2.quality);
     }
 
 }

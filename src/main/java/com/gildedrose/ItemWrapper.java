@@ -25,7 +25,7 @@ public class ItemWrapper {
     }
 
     protected void sellInExpired() {
-            qualityDown();
+        qualityDown();
     }
 
     private boolean sellInIsExpired() {

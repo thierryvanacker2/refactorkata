@@ -11,7 +11,7 @@ class GildedRoseTest_AgedBrieIncreasesQuality {
         Item normalItem = new Item("Aged Brie", 12, 20);
         new GildedRose(new Item[]{normalItem}).updateQuality();
 
-        assertEquals(normalItem.quality, 21);
+        assertEquals(21, normalItem.quality);
     }
 
 }

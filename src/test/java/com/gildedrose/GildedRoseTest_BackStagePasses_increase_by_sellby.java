@@ -18,17 +18,17 @@ class GildedRoseTest_BackStagePasses_increase_by_sellby {
         new GildedRose(new Item[]{Item, Item2, Item3, Item4, Item5, Item6}).updateQuality();
 
         /* Should go up by 1 since sellIn is > 10 */
-        assertEquals(Item.quality, 21);
+        assertEquals(21, Item.quality);
         /* Should go up by 2 since sellIn is 10 but limited by 50 */
-        assertEquals(Item2.quality, 50);
+        assertEquals(50, Item2.quality);
         /* Should go up by 3 since sellIn is 5 but limited by 50 */
-        assertEquals(Item3.quality, 50);
+        assertEquals(50, Item3.quality);
         /* Should go up by 2 since sellIn is 10 */
-        assertEquals(Item4.quality, 42);
+        assertEquals(42, Item4.quality);
         /* Should go up by 3 since sellIn is 5  */
-        assertEquals(Item5.quality, 43);
+        assertEquals(43, Item5.quality);
         /* Should go to 0 since sellIn is 0  */
-        assertEquals(Item6.quality, 0);
+        assertEquals(0, Item6.quality);
     }
 
 }
