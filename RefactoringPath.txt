@@ -1,0 +1,30 @@
+The main class seemed to have all code in one method. By having a log of if-else combinations, nested deep,
+it is hard to find out the exact functionality.
+
+Started of by reading the requirements text and wrote a unit test for all of those cases.
+Some are grouped by functionality (e.g. QualityBoundaries), where we check the up and down limit for quality.
+That makes it easy to check all functionality quickly between the refactoring steps.
+
+Next the main method : updateQuality seemed to have 3 distinct parts :
+
+1: Code concerning update the quality field of items
+2. Code concerning update the sellIn field
+3. Code handling the situation when the item was not sold on time (sellId < 0)
+
+Extracted all of those chunks of code to methods, which are called from the main function. Made a private method per item
+to do the orchestration, and put some comment on the main public method because of the bad chosen name.
+Did not change that one, because it was public (= may be used by some other code outside of this project).
+
+Then the code seemed to act differently, mainly on the name of the item. So tried to reform the code in each method, so
+it would have if-else statements per name of item.
+
+Having that kind of if's made it easier to make a new class ItemWrapper to host all the functionality regarding item.
+We need the wrapper here because we were not allowed to change the Item class itself.
+
+Once all functionality is in the wrapper, it can ben subclassed per type of Item. Made in total 4 for the items with
+non-standard behavior. All other items are standard and use the functionality of the parent class: ItemWrapper.
+
+
+
+
+
